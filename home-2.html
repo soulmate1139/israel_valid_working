@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <link rel="icon" href="https://spaceautocheck.web.app/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OneAppConnect - Universal Wallet
+  </title>
+  <link rel="stylesheet" href="./home-2_files/index-aadf4352.css">
+</head>
+
+<body>
+  <div id="app" data-v-app="">
+    <div class="antialiased box-border min-h-full min-w-full scroll-smooth"><!---->
+      <div class="min-h-screen bg-[#E6EBF0]">
+        <div class="bg-gray-100 text-black">
+          <div class="w-full h-full">
+            <div class="flex justify-between items-center py-3 px-2 shadow-lg">
+              <div class=""><span class="text-black font-semibold">Github <br> Docs</span></div>
+              <div><img class="w-[50px]"
+                  src="data:image/png;base64,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"
+                  alt=""></div>
+              <div class=""><span class="text-black font-semibold">Wallets <br> Apps</span></div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-3 mx-auto max-w-6xl px-4 py-3">
+            <div class="mt-10 mb-5 text-center">
+              <h1 class="text-black font-semibold text-xl py-2">WebConnect WalletEncryption</h1>
+              <p class="text-base py-2"> Open protocol for connecting Wallets to Dapps </p><img class="mt-4 mb-6"
+                src="./home-2_files/banner-main-c4f6aff9.png" alt="banner-main">
+            </div>
+            <div class="mt-4 text-black">
+              <h2 class="text-lg text-black font-semibold pt-3">What is Is <br></h2>
+              <h2 class="text-base text-black font-semibold pb-4">WebconnectWalletEncryption?</h2>
+              <p class="leading-[27px]">WebconnectWalletEncryption​ is an open source protocol for connecting
+                decentralised applications to mobile wallets with QR code scanning or deep linking. A user can interact
+                securely with any Dapp from their mobile phone, making wallets a safer choice compared to desktop or
+                browser extension wallets.</p>
+            </div>
+            <div class="text-black">
+              <h2 class="text-xl text-black font-semibold pt-3 pb-4">How does it work?</h2>
+              <p class="leading-[27px]">WebconnectWalletEncryption connects web applications to supported mobile wallets
+                session is started by a scanning a QR code (desktop) or by clicking an application deep link (mobile).
+              </p>
+            </div>
+            <div class="mt-[70px]">
+              <h1 class="pb-10 text-2xl text-center font-semibold">Connect your wallet</h1>
+              <div class="flex gap-2 justify-left mb-[40px]"><input
+                  class="w-[80%] px-4 py-3 border-2 border-black outline-none" type="text"
+                  placeholder="Find your wallet"><button class="bg-blue-700 text-white px-4">Search</button></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token1.png&name=Cake%20Defi" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/token1.png" alt="Cake Defi"><span
+                    class="text-black font-medium text-lg">Cake Defi</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token2.png&name=TokenPocket" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/token2.png" alt="TokenPocket"><span
+                    class="text-black font-medium text-lg">TokenPocket</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token3.png&name=Tronlink" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/token3.png" alt="Tronlink"><span
+                    class="text-black font-medium text-lg">Tronlink</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token4.png&name=DefiChain" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/token4.png" alt="DefiChain"><span
+                    class="text-black font-medium text-lg">DefiChain</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token5.png&name=p2pb2b" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/token5.png" alt="p2pb2b"><span
+                    class="text-black font-medium text-lg">p2pb2b</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token6.png&name=Biitrex%20Global"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/token6.png" alt="Biitrex Global"><span
+                    class="text-black font-medium text-lg">Biitrex Global</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token7.png&name=Elrond%20Wallet"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/token7.png" alt="Elrond Wallet"><span
+                    class="text-black font-medium text-lg">Elrond Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token8.png&name=Dragonary" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/token8.png" alt="Dragonary"><span
+                    class="text-black font-medium text-lg">Dragonary</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token9.png&name=WarizX" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/token9.png" alt="WarizX"><span
+                    class="text-black font-medium text-lg">WarizX</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token10.png&name=Binance%20Coin%20(BNB)"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/token10.png" alt="Binance Coin (BNB)"><span
+                    class="text-black font-medium text-lg">Binance Coin (BNB)</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token11.jpg&name=BC%20Vault" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/token11.jpg" alt="BC Vault"><span
+                    class="text-black font-medium text-lg">BC Vault</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token12.png&name=Keepkey" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/token12.png" alt="Keepkey"><span
+                    class="text-black font-medium text-lg">Keepkey</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token13.png&name=SecuX%20v20" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/token13.png" alt="SecuX v20"><span
+                    class="text-black font-medium text-lg">SecuX v20</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token14.png&name=Jaxx%20Liberty%20Wallet"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/token14.png" alt="Jaxx Liberty Wallet"><span
+                    class="text-black font-medium text-lg">Jaxx Liberty Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token15.png&name=Safepal%20Wallet"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/token15.png" alt="Safepal Wallet"><span
+                    class="text-black font-medium text-lg">Safepal Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token16.png&name=Bitbox%20Wallet"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/token16.png" alt="Bitbox Wallet"><span
+                    class="text-black font-medium text-lg">Bitbox Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token17.jpg&name=Cobo%20Vault%20Wallet"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/token17.jpg" alt="Cobo Vault Wallet"><span
+                    class="text-black font-medium text-lg">Cobo Vault Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token18.png&name=Bread%20Wallet" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/token18.png" alt="Bread Wallet"><span
+                    class="text-black font-medium text-lg">Bread Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token19.png&name=Exodus%20Wallet"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/token19.png" alt="Exodus Wallet"><span
+                    class="text-black font-medium text-lg">Exodus Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token20.png&name=ICON%20Wallet" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/token20.png" alt="ICON Wallet"><span
+                    class="text-black font-medium text-lg">ICON Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token21.jpeg&name=Blockchain" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/token21.jpeg" alt="Blockchain"><span
+                    class="text-black font-medium text-lg">Blockchain</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token22.jpeg&name=Wallet%20Connect"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/token22.jpeg" alt="Wallet Connect"><span
+                    class="text-black font-medium text-lg">Wallet Connect</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token23.jpg&name=Etoro" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/token23.jpg" alt="Etoro"><span
+                    class="text-black font-medium text-lg">Etoro</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token24.jpg&name=Gate.io" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/token24.jpg" alt="Gate.io"><span
+                    class="text-black font-medium text-lg">Gate.io</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token25.jpg&name=Coinmama" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/token25.jpg" alt="Coinmama"><span
+                    class="text-black font-medium text-lg">Coinmama</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token26.jpg&name=Paybis" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/token26.jpg" alt="Paybis"><span
+                    class="text-black font-medium text-lg">Paybis</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token27.jpg&name=Bitwala" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/token27.jpg" alt="Bitwala"><span
+                    class="text-black font-medium text-lg">Bitwala</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token28.jpeg&name=Trustee%20Wallet"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/token28.jpeg" alt="Trustee Wallet"><span
+                    class="text-black font-medium text-lg">Trustee Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token29.jpeg&name=Defiant" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/token29.jpeg" alt="Defiant"><span
+                    class="text-black font-medium text-lg">Defiant</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token30.jpeg&name=Guarda%20Wallet"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/token30.jpeg" alt="Guarda Wallet"><span
+                    class="text-black font-medium text-lg">Guarda Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token31.jpeg&name=Jade%20Wallet" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/token31.jpeg" alt="Jade Wallet"><span
+                    class="text-black font-medium text-lg">Jade Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token32.jpeg&name=O3Wallet" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/token32.jpeg" alt="O3Wallet"><span
+                    class="text-black font-medium text-lg">O3Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token33.jpeg&name=HashKey%20Me" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/token33.jpeg" alt="HashKey Me"><span
+                    class="text-black font-medium text-lg">HashKey Me</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token34.jpeg&name=PlasmaPay" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/token34.jpeg" alt="PlasmaPay"><span
+                    class="text-black font-medium text-lg">PlasmaPay</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=token35.jpeg&name=RWallet" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/token35.jpeg" alt="RWallet"><span
+                    class="text-black font-medium text-lg">RWallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=tongue-300x300.jpeg&name=Tongue%20Wallet"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/tongue-300x300.jpeg" alt="Tongue Wallet"><span
+                    class="text-black font-medium text-lg">Tongue Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=wallet-300x300.jpeg&name=AToken%20Wallet"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/wallet-300x300.jpeg" alt="AToken Wallet"><span
+                    class="text-black font-medium text-lg">AToken Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=kyber-300x300.jpeg&name=KyberSwap" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/kyber-300x300.jpeg" alt="KyberSwap"><span
+                    class="text-black font-medium text-lg">KyberSwap</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=chain-300x300.jpg&name=Binance%20Chain"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/chain-300x300.jpg" alt="Binance Chain"><span
+                    class="text-black font-medium text-lg">Binance Chain</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=trezor-300x300.png&name=Trezor%20Wallet"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/trezor-300x300.png" alt="Trezor Wallet"><span
+                    class="text-black font-medium text-lg">Trezor Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=flare-300x300.jpeg&name=Flare%20Wallet" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/flare-300x300.jpeg" alt="Flare Wallet"><span
+                    class="text-black font-medium text-lg">Flare Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=xin-300x300.jpeg&name=XinFin%20XDC%20Network"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/xin-300x300.jpeg" alt="XinFin XDC Network"><span
+                    class="text-black font-medium text-lg">XinFin XDC Network</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=talk-300x300.jpeg&name=Talken%20Wallet"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/talk-300x300.jpeg" alt="Talken Wallet"><span
+                    class="text-black font-medium text-lg">Talken Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=aktio-300x300.jpeg&name=Aktionariat" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/aktio-300x300.jpeg" alt="Aktionariat"><span
+                    class="text-black font-medium text-lg">Aktionariat</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=pro-300x300.jpeg&name=KEYRING%20PRO" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/pro-300x300.jpeg" alt="KEYRING PRO"><span
+                    class="text-black font-medium text-lg">KEYRING PRO</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=elli-300x293.jpeg&name=Ellipal" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/elli-300x293.jpeg" alt="Ellipal"><span
+                    class="text-black font-medium text-lg">Ellipal</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=midas-300x264.jpeg&name=Midas%20Wallet" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/midas-300x264.jpeg" alt="Midas Wallet"><span
+                    class="text-black font-medium text-lg">Midas Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=at-1-300x300.jpeg&name=AT.Wallet" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/at-1-300x300.jpeg" alt="AT.Wallet"><span
+                    class="text-black font-medium text-lg">AT.Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=dok-300x300.jpeg&name=Dok%20Wallet" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/dok-300x300.jpeg" alt="Dok Wallet"><span
+                    class="text-black font-medium text-lg">Dok Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=halo-300x300.jpeg&name=HaloDefi%20Wallet"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/halo-300x300.jpeg" alt="HaloDefi Wallet"><span
+                    class="text-black font-medium text-lg">HaloDefi Wallet</span></a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=unstop-300x300.jpeg&name=Unstoppable%20Wallet"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/unstop-300x300.jpeg" alt="Unstoppable Wallet"><span
+                    class="text-black font-medium text-lg">Unstoppable Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=peak-300x300.jpeg&name=PEAKDEFI%20Wallet"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/peak-300x300.jpeg" alt="PEAKDEFI Wallet"><span
+                    class="text-black font-medium text-lg">PEAKDEFI Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=vision-300x300.jpeg&name=Vision" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/vision-300x300.jpeg" alt="Vision"><span
+                    class="text-black font-medium text-lg">Vision</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=keep-300x300.jpeg&name=BitKeep" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/keep-300x300.jpeg" alt="BitKeep"><span
+                    class="text-black font-medium text-lg">BitKeep</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=via-300x300.jpeg&name=ViaWallet" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/via-300x300.jpeg" alt="ViaWallet"><span
+                    class="text-black font-medium text-lg">ViaWallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=point-300x300.jpeg&name=SparkPoint" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/point-300x300.jpeg" alt="SparkPoint"><span
+                    class="text-black font-medium text-lg">SparkPoint</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=bridge-300x300.jpeg&name=Bridge%20Wallet"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/bridge-300x300.jpeg" alt="Bridge Wallet"><span
+                    class="text-black font-medium text-lg">Bridge Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=easy-300x300.jpeg&name=Easy%20Pocket" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/easy-300x300.jpeg" alt="Easy Pocket"><span
+                    class="text-black font-medium text-lg">Easy Pocket</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=ownbit-300x300.jpeg&name=Ownbit" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/ownbit-300x300.jpeg" alt="Ownbit"><span
+                    class="text-black font-medium text-lg">Ownbit</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=spat-300x300.jpeg&name=Spatium" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/spat-300x300.jpeg" alt="Spatium"><span
+                    class="text-black font-medium text-lg">Spatium</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=torus-300x300.jpeg&name=Torus" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/torus-300x300.jpeg" alt="Torus"><span
+                    class="text-black font-medium text-lg">Torus</span></a></div>
+
+
+
+
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=ary-300x300.jpeg&name=Tokenary" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/ary-300x300.jpeg" alt="Tokenary"><span
+                    class="text-black font-medium text-lg">Tokenary</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=bavo-300x300.jpeg&name=CYBAVO%20Wallet"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/bavo-300x300.jpeg" alt="CYBAVO Wallet"><span
+                    class="text-black font-medium text-lg">CYBAVO Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=grid-300x300.jpeg&name=GridPlus" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/grid-300x300.jpeg" alt="GridPlus"><span
+                    class="text-black font-medium text-lg">GridPlus</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=omi.jpg&name=Coinomi" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/omi.jpg" alt="Coinomi"><span
+                    class="text-black font-medium text-lg">Coinomi</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=nash-300x300.jpeg&name=Nash" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/nash-300x300.jpeg" alt="Nash"><span
+                    class="text-black font-medium text-lg">Nash</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=zel-300x300.jpeg&name=ZelCore" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/zel-300x300.jpeg" alt="ZelCore"><span
+                    class="text-black font-medium text-lg">ZelCore</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=y-300x300.jpeg&name=D&#39;CENT%20Wallet"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/y-300x300.jpeg" alt="D&#39;CENT Wallet"><span
+                    class="text-black font-medium text-lg">D'CENT Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=alpha-300x300.jpeg&name=AlphaWallet" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/alpha-300x300.jpeg" alt="AlphaWallet"><span
+                    class="text-black font-medium text-lg">AlphaWallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=alice-300x300.jpeg&name=Alice" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/alice-300x300.jpeg" alt="Alice"><span
+                    class="text-black font-medium text-lg">Alice</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=s-300x300.jpeg&name=CoolWallet%20S" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/s-300x300.jpeg" alt="CoolWallet S"><span
+                    class="text-black font-medium text-lg">CoolWallet S</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=98-300x300.jpeg&name=Coin98" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/98-300x300.jpeg" alt="Coin98"><span
+                    class="text-black font-medium text-lg">Coin98</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=atomic-300x300.jpeg&name=Atomic" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/atomic-300x300.jpeg" alt="Atomic"><span
+                    class="text-black font-medium text-lg">Atomic</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=vault-300x300.jpeg&name=TrustVault" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/vault-300x300.jpeg" alt="TrustVault"><span
+                    class="text-black font-medium text-lg">TrustVault</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=loop-300x300.jpeg&name=Loopring%20Wallet"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/loop-300x300.jpeg" alt="Loopring Wallet"><span
+                    class="text-black font-medium text-lg">Loopring Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=myjey-300x300.jpeg&name=MYKEY" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/myjey-300x300.jpeg" alt="MYKEY"><span
+                    class="text-black font-medium text-lg">MYKEY</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=eidoo-300x300.jpeg&name=Eidoo" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/eidoo-300x300.jpeg" alt="Eidoo"><span
+                    class="text-black font-medium text-lg">Eidoo</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=hubi-300x300.jpeg&name=Huobi%20Wallet" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/hubi-300x300.jpeg" alt="Huobi Wallet"><span
+                    class="text-black font-medium text-lg">Huobi Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=inch-300x300.jpeg&name=1inch%20Wallet" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/inch-300x300.jpeg" alt="1inch Wallet"><span
+                    class="text-black font-medium text-lg">1inch Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=auther-300x300.jpeg&name=Authereum" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/auther-300x300.jpeg" alt="Authereum"><span
+                    class="text-black font-medium text-lg">Authereum</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=coinb-300x260.jpg&name=Coinbase%20Wallet"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/coinb-300x260.jpg" alt="Coinbase Wallet"><span
+                    class="text-black font-medium text-lg">Coinbase Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=legder-300x300.jpeg&name=Ledger%20Live" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/legder-300x300.jpeg" alt="Ledger Live"><span
+                    class="text-black font-medium text-lg">Ledger Live</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=bit-300x300.jpeg&name=BitPay" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/bit-300x300.jpeg" alt="BitPay"><span
+                    class="text-black font-medium text-lg">BitPay</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=math-300x300.jpeg&name=MathWallet" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/math-300x300.jpeg" alt="MathWallet"><span
+                    class="text-black font-medium text-lg">MathWallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=pocket-300x300.jpeg&name=TokenPocket" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/pocket-300x300.jpeg" alt="TokenPocket"><span
+                    class="text-black font-medium text-lg">TokenPocket</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=onto-300x300.jpeg&name=ONTO" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/onto-300x300.jpeg" alt="ONTO"><span
+                    class="text-black font-medium text-lg">ONTO</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=imtoken-300x300.jpeg&name=imToken" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/imtoken-300x300.jpeg" alt="imToken"><span
+                    class="text-black font-medium text-lg">imToken</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=pillar-300x300.jpeg&name=Pillar" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/pillar-300x300.jpeg" alt="Pillar"><span
+                    class="text-black font-medium text-lg">Pillar</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=ether.jpg&name=MyEtherWallet" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/ether.jpg" alt="MyEtherWallet"><span
+                    class="text-black font-medium text-lg">MyEtherWallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=defi-300x300.jpeg&name=Crypto.com%20%7C%20DeFi%20Wallet"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/defi-300x300.jpeg" alt="Crypto.com | DeFi Wallet"><span
+                    class="text-black font-medium text-lg">Crypto.com | DeFi Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=gnoisis-300x300.jpeg&name=Gnosis%20Safe%20Multisig"
+                  class="flex items-center gap-[24px]"><img class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/gnoisis-300x300.jpeg" alt="Gnosis Safe Multisig"><span
+                    class="text-black font-medium text-lg">Gnosis Safe Multisig</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=metamask-300x300.jpeg&name=MetaMask" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/metamask-300x300.jpeg" alt="MetaMask"><span
+                    class="text-black font-medium text-lg">MetaMask</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=argent-300x300.jpeg&name=Argent" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/argent-300x300.jpeg" alt="Argent"><span
+                    class="text-black font-medium text-lg">Argent</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=rainbow-300x300.jpeg&name=Rainbow" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/rainbow-300x300.jpeg" alt="Rainbow"><span
+                    class="text-black font-medium text-lg">Rainbow</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=trustwallet-300x300.jpeg&name=Trust%20Wallet" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/trustwallet-300x300.jpeg"
+                    alt="Trust Wallet"><span class="text-black font-medium text-lg">Trust Wallet</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=Nuo.jpeg&name=Nuo" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/Nuo.jpeg" alt="Nuo"><span
+                    class="text-black font-medium text-lg">Nuo</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=DdexLogo_Supplied_250x250.png&name=DDEX" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/DdexLogo_Supplied_250x250.png"
+                    alt="DDEX"><span class="text-black font-medium text-lg">DDEX</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=airswap-pr-300x200.jpeg&name=Airswap" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/airswap-pr-300x200.jpeg" alt="Airswap"><span
+                    class="text-black font-medium text-lg">Airswap</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=601d5be7f1cf7d0eff03550e_PoolTogether500x500-300x300.png&name=PoolTogether" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover"
+                    src="./home-2_files/601d5be7f1cf7d0eff03550e_PoolTogether500x500-300x300.png"
+                    alt="PoolTogether"><span class="text-black font-medium text-lg">PoolTogether</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=0x-300x200.jpeg&name=0x" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/0x-300x200.jpeg" alt="0x"><span
+                    class="text-black font-medium text-lg">0x</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=0_u5_g8J6sa0IZYJtx-300x168.jpeg&name=Uniswap" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/0_u5_g8J6sa0IZYJtx-300x168.jpeg"
+                    alt="Uniswap"><span class="text-black font-medium text-lg">Uniswap</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=IdexLogo_Supplied_250x250.png&name=IDEX" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/IdexLogo_Supplied_250x250.png"
+                    alt="IDEX"><span class="text-black font-medium text-lg">IDEX</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=maker.jpeg&name=Maker" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/maker.jpeg" alt="Maker"><span
+                    class="text-black font-medium text-lg">Maker</span></a></div>
+
+
+
+
+
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=og-image-300x150.png&name=dYdX" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/og-image-300x150.png" alt="dYdX"><span
+                    class="text-black font-medium text-lg">dYdX</span></a></div>
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                  href="connect/index.html?img=5692.png&name=Compound" class="flex items-center gap-[24px]"><img
+                    class="w-[48px] h-[48px] bg-cover" src="./home-2_files/5692.png" alt="Compound"><span
+                    class="text-black font-medium text-lg">Compound</span></a></div>
+
+
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                href="connect/index.html?img=ton.png&name=Ton" class="flex items-center gap-[24px]"><img
+                  class="w-[48px] h-[48px] bg-cover" src="./home-2_files/ton.png" alt="Ton"><span
+                  class="text-black font-medium text-lg">Ton</span></a></div>
+
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                href="connect/index.html?img=bitget.png&name=Bitget" class="flex items-center gap-[24px]"><img
+                  class="w-[48px] h-[48px] bg-cover" src="./home-2_files/bitget.png" alt="Bitget"><span
+                  class="text-black font-medium text-lg">Bitget</span></a></div>
+
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                href="connect/index.html?img=tonkeeper.png&name=Tonkeeper" class="flex items-center gap-[24px]"><img
+                  class="w-[48px] h-[48px] bg-cover" src="./home-2_files/tonkeeper.png" alt="Tonkeeper"><span
+                  class="text-black font-medium text-lg">Tonkeeper</span></a></div>
+
+              <div class="w-full h-full px-2 py-4 bg-white mt-[20px] shadow-lg rounded-md"><a
+                href="connect/index.html?img=trust.png&name=Trust" class="flex items-center gap-[24px]"><img
+                  class="w-[48px] h-[48px] bg-cover" src="./home-2_files/trust.png" alt="Trust"><span
+                  class="text-black font-medium text-lg">Trust</span></a></div>
+            </div>
+            <div class="flex flex-col gap-3 items-center mt-8"><span class="text-center">Open an app submission issue on
+                <span class="font-semibold text-sky-700">GitHub</span> to add your app here</span>
+              <ul class="flex justify-between gap-3 mt-7">
+                <li class="flex font-mono">Discord</li>
+                <li class="flex font-mono">Twitter</li>
+                <li class="flex font-mono">GitHub</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div><!---->
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
